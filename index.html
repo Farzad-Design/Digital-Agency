@@ -105,8 +105,8 @@
     #nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:22px 0; border-bottom:1px solid transparent; transition:all .3s; }
     #nav.s { background:rgba(8,8,8,.92); backdrop-filter:blur(28px); -webkit-backdrop-filter:blur(28px); border-bottom-color:rgba(180,200,255,.08); padding:15px 0; }
     .nav-i { display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .logo { font-family:var(--font-d); font-size:20px; font-weight:900; color:var(--text); letter-spacing:-.01em; white-space:nowrap; }
-    .logo em { color:var(--accent); font-style:normal; }
+    .logo { display:inline-flex; align-items:center; }
+    .logo img { height:60px; width:auto; display:block; }
     .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
     .nav-links a { font-size:13.5px; font-weight:500; color:var(--text-muted); transition:color .2s; }
     .nav-links a:hover { color:var(--text); }
@@ -326,7 +326,7 @@
 <nav id="nav">
   <div class="wrap">
     <div class="nav-i">
-      <a href="#" class="logo">DesignHaus <em>Studio</em></a>
+      <a href="#" class="logo"><img src="logo.svg" alt="DesignHaus Studio"></a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -841,7 +841,7 @@
   <div class="wrap">
     <div class="ft-top">
       <div class="ft-brand">
-        <a href="#" class="logo">DesignHaus <em>Studio</em></a>
+        <a href="#" class="logo"><img src="logo.svg" alt="DesignHaus Studio"></a>
         <p>Web Design & SEO agency for SMEs. Launch-ready in 21 days, 100+ projects, 4.9/5 rating.</p>
         <div class="ft-soc">
           <a href="#" class="soc-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
