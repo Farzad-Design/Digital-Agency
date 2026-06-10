@@ -585,7 +585,7 @@
       <h2>Recent work, live results.</h2>
       <p>A selection of websites designed and built for real clients.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="proj-grid reveal">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="proj-grid reveal">
 
       <!-- Napoli Nero -->
       <a href="https://napolinero.designhausstudio.studio/" target="_blank" rel="noopener noreferrer"
@@ -631,6 +631,27 @@
         </div>
       </a>
 
+      <!-- Luxury Watch -->
+      <a href="https://luxury-watch.designhausstudio.studio/" target="_blank" rel="noopener noreferrer"
+        style="border-radius:var(--radius);overflow:hidden;display:block;text-decoration:none;position:relative;aspect-ratio:16/9;background:#08080c;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;"
+        onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,.6)';this.querySelector('.proj-overlay').style.opacity='1'"
+        onmouseout="this.style.transform='';this.style.boxShadow='';this.querySelector('.proj-overlay').style.opacity='0'">
+        <img src="images/luxury-watch.jpg"
+          alt="Luxury Watch website screenshot"
+          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease;"
+          loading="lazy">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(4,4,8,.92) 0%,rgba(4,4,8,.3) 45%,transparent 100%);pointer-events:none;"></div>
+        <div class="proj-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,.18);opacity:0;transition:opacity .3s;pointer-events:none;"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px;pointer-events:none;">
+          <p style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(180,180,210,.75);margin-bottom:5px;">Website Design</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <h3 style="font-family:var(--font-d);font-weight:700;font-size:18px;color:#fff;">Luxury Watch</h3>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(180,180,210,.9)" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </div>
+          <p style="font-size:12.5px;color:rgba(255,255,255,.5);margin-top:4px;">Luxury timepiece brand — dark minimal design with HTML & CSS.</p>
+        </div>
+      </a>
+
       <!-- Noir Éclipse -->
       <a href="https://noir-eclipse.designhausstudio.studio/" target="_blank" rel="noopener noreferrer"
         style="border-radius:var(--radius);overflow:hidden;display:block;text-decoration:none;position:relative;aspect-ratio:16/9;background:#080808;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;"
@@ -657,7 +678,6 @@
 </section>
 
 <style>
-@media (max-width:768px) { .proj-grid { grid-template-columns: repeat(2,1fr) !important; } }
 @media (max-width:640px) { .proj-grid { grid-template-columns: 1fr !important; } }
 </style>
 
