@@ -160,6 +160,33 @@
     .hero-pill:hover { color:var(--text); border-bottom-color:rgba(200,215,255,.35); }
     .hero-pill svg { width:12px; height:12px; }
 
+    /* HERO TWO-COLUMN */
+    .hero-layout { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .hero-right { position:relative; padding:30px 0 30px 10px; }
+
+    /* BROWSER MOCKUP */
+    .browser-frame { border-radius:12px; overflow:hidden; border:1px solid rgba(154,184,208,0.16); box-shadow:0 28px 80px rgba(0,0,10,0.6); }
+    .browser-bar { display:flex; align-items:center; gap:10px; padding:10px 14px; background:rgba(6,12,28,0.97); border-bottom:1px solid rgba(154,184,208,0.1); }
+    .b-dots { display:flex; gap:5px; }
+    .b-dot { width:8px; height:8px; border-radius:50%; }
+    .b-dot-r { background:rgba(255,95,87,0.60); }
+    .b-dot-y { background:rgba(255,189,46,0.60); }
+    .b-dot-g { background:rgba(39,201,63,0.50); }
+    .b-url { flex:1; background:rgba(154,184,208,0.06); border:1px solid rgba(154,184,208,0.1); border-radius:5px; padding:4px 10px; font-size:11px; color:rgba(154,184,208,0.45); text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .browser-img { width:100%; height:auto; display:block; }
+
+    /* FLOATING STAT CARDS */
+    .hcard { position:absolute; background:linear-gradient(145deg,rgba(6,12,28,0.92),rgba(8,16,36,0.88)) padding-box, linear-gradient(135deg,rgba(154,184,208,0.30) 0%,rgba(154,184,208,0.06) 50%,rgba(154,184,208,0.22) 100%) border-box; border:1px solid transparent; backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-radius:12px; padding:11px 15px; display:flex; align-items:center; gap:10px; box-shadow:0 8px 32px rgba(0,0,0,0.5); z-index:2; }
+    .hcard-ico { width:30px; height:30px; border-radius:7px; background:var(--accent-dim); border:1px solid rgba(154,184,208,0.18); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .hcard-ico svg { width:13px; height:13px; color:var(--accent); }
+    .hcard-n { font-family:var(--font-d); font-size:14px; font-weight:700; color:var(--text); line-height:1; margin-bottom:3px; }
+    .hcard-l { font-size:10.5px; color:var(--text-muted); white-space:nowrap; }
+    .hcard-1 { top:-14px; right:-14px; }
+    .hcard-2 { bottom:24px; left:-26px; }
+    .hcard-3 { bottom:-14px; right:24px; }
+
+    @media (max-width:960px) { .hero-layout { grid-template-columns:1fr; } .hero-right { display:none; } }
+
     .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; border-radius:var(--radius); overflow:hidden; margin-top:72px; border:1px solid transparent;
       background: linear-gradient(rgba(5,9,25,0.80),rgba(5,9,25,0.80)) padding-box,
                   linear-gradient(135deg, rgba(210,220,255,.5) 0%, rgba(140,160,230,.1) 50%, rgba(210,220,255,.5) 100%) border-box; }
@@ -412,44 +439,79 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="wrap hero-geo-inner">
-    <div class="hero-eyebrow reveal">
-      <span class="badge">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        4.9/5 · Trusted by 100+ businesses
-      </span>
-    </div>
+    <div class="hero-layout">
 
-    <h1 class="reveal reveal-d1">Web Design & SEO<br>that <em>actually</em> converts.</h1>
+      <!-- LEFT COLUMN -->
+      <div class="hero-left">
+        <div class="hero-eyebrow reveal">
+          <span class="badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            4.9/5 · Trusted by 100+ businesses
+          </span>
+        </div>
 
-    <p class="hero-sub reveal reveal-d2">Clear strategy, measurable from day one. We turn website visitors into real customers — launch-ready base in 21 days.</p>
+        <h1 class="reveal reveal-d1">Web Design & SEO<br>that <em>actually</em> converts.</h1>
 
-    <ul class="hero-bullets reveal">
-      <li class="bullet">
-        <div class="bullet-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div class="bullet-txt"><strong>Launch in 21 Days</strong><span>Base ready, extensions in sprints. Complex projects by agreement.</span></div>
-      </li>
-      <li class="bullet">
-        <div class="bullet-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div class="bullet-txt"><strong>Measurable from Day 1</strong><span>GDPR-compliant tracking (server-side) without conversion data gaps.</span></div>
-      </li>
-      <li class="bullet">
-        <div class="bullet-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <div class="bullet-txt"><strong>100+ Projects · 4.9/5 Rating</strong><span>Experience you can feel, and results that are traceable.</span></div>
-      </li>
-    </ul>
+        <p class="hero-sub reveal reveal-d2">Clear strategy, measurable from day one. We turn website visitors into real customers — launch-ready base in 21 days.</p>
 
-    <div class="hero-cta reveal">
-      <a href="#contact" class="btn btn-p">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg>
-        Book Free Consultation
-      </a>
-      <a href="#services" class="btn btn-o">View Services</a>
-    </div>
+        <ul class="hero-bullets reveal">
+          <li class="bullet">
+            <div class="bullet-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="bullet-txt"><strong>Launch in 21 Days</strong><span>Base ready, extensions in sprints. Complex projects by agreement.</span></div>
+          </li>
+          <li class="bullet">
+            <div class="bullet-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="bullet-txt"><strong>Measurable from Day 1</strong><span>GDPR-compliant tracking (server-side) without conversion data gaps.</span></div>
+          </li>
+          <li class="bullet">
+            <div class="bullet-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div class="bullet-txt"><strong>100+ Projects · 4.9/5 Rating</strong><span>Experience you can feel, and results that are traceable.</span></div>
+          </li>
+        </ul>
 
-    <div class="hero-pills reveal">
-      <a href="#seo" class="hero-pill">Free Google Visibility Check<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-      <a href="#ai" class="hero-pill">Free AI Visibility Analysis (GEO)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
-    </div>
+        <div class="hero-cta reveal">
+          <a href="#contact" class="btn btn-p">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg>
+            Book Free Consultation
+          </a>
+          <a href="#services" class="btn btn-o">View Services</a>
+        </div>
+
+        <div class="hero-pills reveal">
+          <a href="#seo" class="hero-pill">Free Google Visibility Check<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+          <a href="#ai" class="hero-pill">Free AI Visibility Analysis (GEO)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN — browser mockup -->
+      <div class="hero-right reveal">
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <div class="b-dots">
+              <span class="b-dot b-dot-r"></span>
+              <span class="b-dot b-dot-y"></span>
+              <span class="b-dot b-dot-g"></span>
+            </div>
+            <div class="b-url">napolinero.designhausstudio.studio</div>
+          </div>
+          <img src="images/napoli-nero.jpg" alt="Napoli Nero project" class="browser-img">
+        </div>
+        <!-- floating cards -->
+        <div class="hcard hcard-1">
+          <div class="hcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div><div class="hcard-n">+379%</div><div class="hcard-l">SEO Growth</div></div>
+        </div>
+        <div class="hcard hcard-2">
+          <div class="hcard-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg></div>
+          <div><div class="hcard-n">4.9 / 5</div><div class="hcard-l">Client Rating</div></div>
+        </div>
+        <div class="hcard hcard-3">
+          <div class="hcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="hcard-n">21 Days</div><div class="hcard-l">Time to Launch</div></div>
+        </div>
+      </div>
+
+    </div><!-- /hero-layout -->
 
     <div class="stats reveal">
       <div class="stat"><div class="stat-n" data-to="100">0<em>+</em></div><div class="stat-l">Projects</div></div>
